@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/ask-owner\"",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  },
+  "modules": ["./bridge.ts"]
+}

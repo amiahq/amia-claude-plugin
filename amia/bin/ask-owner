@@ -1,0 +1,13 @@
+#!/bin/sh
+# docs/497 §4.5, D25: Claude Code's PermissionRequest hook. The request on stdin is asked on the owner's devices through
+# this computer's `ac serve`; the owner's allow or deny is the decision, and anything else decides nothing, so Claude
+# Code's own prompt does. `ac` is named by path: on macOS, `ac` on PATH is the system's connect-time accounting tool.
+# An `ac` built before `ask-owner` would read the words as a prompt to a model, so one is asked first whether it knows
+# the command (its help names every command), and one that does not is passed over.
+for ac in "${AC_BINARY:-}" /Applications/Amia.app/Contents/MacOS/ac /usr/local/bin/ac; do
+  if [ -n "$ac" ] && [ -x "$ac" ] && "$ac" --help 2>/dev/null | grep -q 'ask-owner'; then
+    exec "$ac" ask-owner claude-code
+  fi
+done
+echo "ac plugin: no ac here takes an ask yet; Claude Code's own prompt decides" >&2
+exit 0

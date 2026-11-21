@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ac": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/ac-member"
+    }
+  }
+}

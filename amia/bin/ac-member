@@ -1,0 +1,13 @@
+#!/bin/sh
+# docs/557 R9 and I-NATIVE as the owner amended it (2026-10-24): the team's board (RoomTodo, the todo and decision acts)
+# in this Claude Code session, run by this computer's `ac serve` as the session's participant. Claude Code names the
+# session to the server in CLAUDE_CODE_SESSION_ID (measured on 2.1.310: docs/captures/557-cc-mcp-env-20261024). `ac` is
+# named by path and asked first whether it takes an ask, as ask-owner asks: an `ac` too old for that would read the
+# words as a prompt to a model.
+for ac in "${AC_BINARY:-}" /Applications/Amia.app/Contents/MacOS/ac /usr/local/bin/ac; do
+  if [ -n "$ac" ] && [ -x "$ac" ] && "$ac" --help 2>/dev/null | grep -q 'ask-owner'; then
+    exec "$ac" mcp member claude_code
+  fi
+done
+echo "ac plugin: no ac here serves the team's board" >&2
+exit 1

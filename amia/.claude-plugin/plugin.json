@@ -1,0 +1,11 @@
+{
+  "name": "amia",
+  "version": "1.0.0",
+  "description": "Route Claude Code permission prompts and questions to Amia on your Mac and your iPhone Lock Screen. Your terminal prompt stays live and the first answer wins.",
+  "author": {
+    "name": "Amia",
+    "url": "https://amia.to"
+  },
+  "homepage": "https://amia.to",
+  "license": "MIT"
+}

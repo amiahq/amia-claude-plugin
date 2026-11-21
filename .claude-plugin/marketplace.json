@@ -1,0 +1,17 @@
+{
+  "name": "amia",
+  "owner": {
+    "name": "Amia",
+    "url": "https://amia.to"
+  },
+  "metadata": {
+    "description": "Amia plugin for Claude Code: route permission prompts and questions to your Mac Desk and iPhone Lock Screen while sessions keep working."
+  },
+  "plugins": [
+    {
+      "name": "amia",
+      "source": "./amia",
+      "description": "Never miss a Claude Code permission prompt: questions surface in Amia's Needs You list and on your iPhone Lock Screen, while your terminal prompt stays live."
+    }
+  ]
+}
