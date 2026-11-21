@@ -1,11 +1,18 @@
 {
   "name": "amia",
+  "displayName": "Amia",
   "version": "1.0.0",
   "description": "Route Claude Code permission prompts and questions to Amia on your Mac and your iPhone Lock Screen. Your terminal prompt stays live and the first answer wins.",
   "author": {
     "name": "Amia",
     "url": "https://amia.to"
   },
-  "homepage": "https://amia.to",
+  "homepage": "https://amia.to/",
+  "repository": "https://github.com/amiahq/amia-claude-plugin",
+  "documentationUrl": "https://amia.to/help/",
+  "privacyPolicyUrl": "https://amia.to/privacy",
+  "termsOfServiceUrl": "https://amia.to/terms/",
+  "supportUrl": "https://amia.to/help/",
+  "keywords": ["amia", "notifications", "permissions", "iphone", "lock-screen", "multi-agent", "remote"],
   "license": "MIT"
 }
